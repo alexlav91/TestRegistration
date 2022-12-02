@@ -8,7 +8,7 @@ public interface UserService {
 
     UserRespond createUser(UserCreateRequest userCreateRequest);
 
-    UserEntity findUserEntity(Long id);
+    UserEntity findUserEntity(Integer id);
 
-    void approveUser(Long id);
+    void approveUser(Integer id);
 }

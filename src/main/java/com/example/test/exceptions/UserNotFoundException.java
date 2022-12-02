@@ -6,7 +6,7 @@ public class UserNotFoundException extends RuntimeException{
 
     private static final String USER_NOT_FOUND_MESSAGE = "Пользователь не найден, id: %s";
 
-    public static UserNotFoundException createById(Long id){
+    public static UserNotFoundException createById(Integer id){
         String message = String.format(USER_NOT_FOUND_MESSAGE, id);
         return new UserNotFoundException(message);
     }

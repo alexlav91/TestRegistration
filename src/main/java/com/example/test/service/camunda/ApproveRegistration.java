@@ -17,7 +17,7 @@ public class ApproveRegistration implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
-        Long id = (Long)delegateExecution.getVariable("userId");
+        Integer id = (Integer) delegateExecution.getVariable("userId");
 
         userService.approveUser(id);
 

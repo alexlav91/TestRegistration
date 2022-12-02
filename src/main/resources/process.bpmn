@@ -4,17 +4,8 @@
     <bpmn:endEvent id="EndEvent_0x6ir2l">
       <bpmn:incoming>Flow_081n6oy</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:userTask id="registration" name="Утвердить/отклонить регистрацию" camunda:candidateUsers="demo">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="username" label="Имя пользователя" type="string">
-            <camunda:properties />
-            <camunda:validation />
-          </camunda:formField>
-          <camunda:formField id="decision" label="Подтвердить регистрацию" type="boolean" />
-          <camunda:formField id="userId" label="Id пользователя" type="long" />
-        </camunda:formData>
-      </bpmn:extensionElements>
+    <bpmn:userTask id="registration" name="Утвердить/отклонить регистрацию" camunda:formKey="camunda-forms:/forms/approving.form" camunda:candidateUsers="demo">
+      <bpmn:extensionElements />
       <bpmn:incoming>Flow_0vgg9ww</bpmn:incoming>
       <bpmn:outgoing>Flow_14pzg6o</bpmn:outgoing>
     </bpmn:userTask>
@@ -48,9 +39,6 @@
           <camunda:formField id="username" label="username" type="string" />
           <camunda:formField id="userId" label="userId" type="long" />
         </camunda:formData>
-        <camunda:properties>
-          <camunda:property />
-        </camunda:properties>
       </bpmn:extensionElements>
       <bpmn:outgoing>Flow_0vgg9ww</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_05octn7" messageRef="Message_3kcpn1r" />

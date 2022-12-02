@@ -36,14 +36,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserEntity findUserEntity(Long id) {
+    public UserEntity findUserEntity(Integer id) {
         UserEntity userEntity = userRepository.findById(id).orElseThrow(()->
                 UserNotFoundException.createById(id));
         return userEntity;
     }
 
     @Override
-    public void approveUser(Long id) {
+    public void approveUser(Integer id) {
         UserEntity userEntity = findUserEntity(id);
         userEntity.setApproved(true);
         userRepository.save(userEntity);
