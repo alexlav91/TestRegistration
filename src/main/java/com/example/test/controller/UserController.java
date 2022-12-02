@@ -4,8 +4,6 @@ package com.example.test.controller;
 import com.example.test.controller.dto.UserCreateRequest;
 import com.example.test.service.api.UserService;
 import lombok.RequiredArgsConstructor;
-import org.camunda.bpm.engine.spring.annotations.StartProcess;
-import org.camunda.bpm.engine.spring.annotations.StartTask;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +18,7 @@ public class UserController {
 
     private final UserService userService;
 
+
     @GetMapping()
     public String viewHomePage() {
         return "index";
@@ -32,7 +31,7 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public String save (@ModelAttribute("user") UserCreateRequest userCreateRequest){
+    public String save(@ModelAttribute("user") UserCreateRequest userCreateRequest) {
         userService.createUser(userCreateRequest);
         return "redirect:/index";
     }
