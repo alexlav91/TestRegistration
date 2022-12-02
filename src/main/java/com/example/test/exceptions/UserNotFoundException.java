@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test.exceptions;
 
 public class UserNotFoundException extends RuntimeException{
 

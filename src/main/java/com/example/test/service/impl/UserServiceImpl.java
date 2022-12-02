@@ -1,6 +1,6 @@
 package com.example.test.service.impl;
 
-import com.example.test.UserNotFoundException;
+import com.example.test.exceptions.UserNotFoundException;
 import com.example.test.controller.dto.UserCreateRequest;
 import com.example.test.controller.dto.UserRespond;
 import com.example.test.entity.UserEntity;
@@ -9,8 +9,6 @@ import com.example.test.repository.UserRepository;
 import com.example.test.service.api.UserService;
 import lombok.RequiredArgsConstructor;
 import org.camunda.bpm.engine.RuntimeService;
-import org.camunda.bpm.engine.spring.annotations.StartProcess;
-import org.camunda.bpm.engine.spring.annotations.StartTask;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
