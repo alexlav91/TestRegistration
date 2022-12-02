@@ -28,7 +28,6 @@ public class UserServiceImpl implements UserService {
     public UserRespond createUser(UserCreateRequest userCreateRequest) {
         UserEntity userEntityForSave = userMapper.toEntity(userCreateRequest);
         UserEntity userEntity = userRepository.save(userEntityForSave);
-        Map<String, Object> variable = new HashMap<>();
         runtimeService.createMessageCorrelation("UserRegistered")
                 .setVariable("username", userEntity.getName())
                 .setVariable("userId", userEntity.getId())
