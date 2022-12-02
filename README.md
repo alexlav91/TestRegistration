@@ -46,7 +46,8 @@ TestRegistration(Camunda) - приложение дл€ регистрации пользовател€ с
         hibernate:
           dialect: org.hibernate.dialect.H2Dialect
    ```
-
+3. јдрес дл€ регистрации нового пользовател€:  http://localhost:8080/index
+4. јдрес Comunda: http://localhost:8080
    
    
    
