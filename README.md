@@ -47,7 +47,7 @@ TestRegistration(Camunda) - приложение для регистрации пользователя с
           dialect: org.hibernate.dialect.H2Dialect
    ```
 3. Адрес для регистрации нового пользователя:  http://localhost:8080/index
-4. Адрес Comunda: http://localhost:8080
+4. Адрес Camunda: http://localhost:8080
    
    
    
